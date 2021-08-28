@@ -14,9 +14,9 @@ render(){
         <Route path="/" exact component={App} />
         <Route path="/sobre" component={Sobre} />
         <Route path="/contato" component={Contato} />
-    </Switch>   
+    </Switch> 
 </BrowserRouter>
 </div>
-    );
+);
 }
 }

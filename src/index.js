@@ -10,4 +10,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-
+process.env.CI = false
