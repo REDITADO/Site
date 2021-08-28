@@ -1,38 +1,318 @@
-.App {
-  text-align: center;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,body{
+height: 100vh;
+width: 100vw;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container .menu{
+    height: 4rem;
+    width: 100vw;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    background-color: #222;
+    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+}
+.container .menu svg{
+    color: tomato;
+    fill: currentColor;
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    font-size: 1.5rem;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    flex-shrink: 0;
+    user-select: none;
+
+    position: relative;
+    left: 0.5rem;
+    cursor: pointer;
+}
+.container .menu h5{
+position: relative;
+left: 1rem;
+
+    font-size: 2rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.334;
+    letter-spacing: 0em;
+    color: tan;
+    
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* section */
+
+.content{
+    position: relative;
+    height: 90vh;
+    background-color: #d0c095;
+    width: 100vw;
 }
 
-.App-link {
-  color: #61dafb;
+.content .informations{
+position: absolute;
+left:30vw;
+top: 25vh;
+font-size: 2rem;
+height: 20rem;
+width: 40rem;
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+.content .informations .logo-svg{
+    position: relative;
+    /* left: 2.5rem; */
+    width: 8rem;
+}
+.content .informations h1{
+font-weight: 600 !important;
+color: #353239;
+font-family: "Franklin Gothic Medium","Arial Narrow",Arial,sans-serif;
+}
+.controlLightButton{
+    position: relative;
+    /* left: 1.5rem; */
+    top: 1.5rem;
+    padding: 1rem;
+    margin: 0;
+    background-color: darkslategray;
+    border:0;
+    border-radius: 10rem;
+    width: 10rem;
+    text-align: center;
+    cursor: pointer;
+}
+.colorControl{
+    background-color: tan !important;
+}
+.dark{
+    position: relative;
+    
+    background-color: #494949;
+  
+
+    color: white!important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* responsive */
+@media screen and (max-width: 700px)and (min-width:500px) {
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    html,body{
+    height: 100vh;
+    width: 100vw;
+    }
+    .Bar{
+        z-index: 3;
+    }
+    .container{
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    
+    .container .menu{
+        position: relative;
+        
+        height: 4rem;
+        width: 100vw;
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+        background-color: #222;
+        box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+    }
+    .container .menu svg{
+        color: tomato;
+        fill: currentColor;
+        width: 2rem;
+        height: 2rem;
+        display: inline-block;
+        font-size: 1.5rem;
+        transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        flex-shrink: 0;
+        user-select: none;
+    
+        position: relative;
+        left: 0.5rem;
+        cursor: pointer;
+    }
+    .container .menu h5{
+    position: relative;
+    left: 1rem;
+    
+        font-size: 2rem;
+        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+        font-weight: 400;
+        line-height: 1.334;
+        letter-spacing: 0em;
+        color: tan;
+    }
+        
+        /* section */
+
+.content{
+    position: relative;
+    height: 90vh;
+    background-color: #d0c095;
+    width: 100vw;
+}
+
+.content .informations{
+position: absolute;
+left:-0.5vw; 
+top: 25vh;
+font-size: 2rem;
+height: 20rem;
+width: 40rem;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+.content .informations .logo-svg{
+    position: relative;
+    /* left: 2.5rem; */
+    width: 8rem;
+}
+.content .informations h1{
+font-weight: 600 !important;
+color: #353239;
+font-family: "Franklin Gothic Medium","Arial Narrow",Arial,sans-serif;
+}
+.controlLightButton{
+    position: relative;
+    /* left: 1.5rem; */
+    top: 1.5rem;
+    padding: 1rem;
+    margin: 0;
+    background-color: darkslategray;
+    border:0;
+    border-radius: 10rem;
+    width: 10rem;
+    text-align: center;
+    cursor: pointer;
+}
+.colorControl{
+    background-color: tan !important;
+}
+.dark{
+    background-color: #494949;
+    color: white!important;
+}
+
+}
+@media screen and (max-width: 437px){
+    .Bar{
+        z-index: 3;
+    }
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    html,body{
+    height: 100vh;
+    width: 100vw;
+    }
+
+    .content .informations{
+        position: absolute;
+        left:-30vw; 
+        top: 25vh;
+        font-size: 2rem;
+        height: 20rem;
+        width: 40rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+        }
+}
+@media screen and (max-width:750px) and (min-width:700px){
+    .Bar{
+        z-index: 3;
+    }
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    html,body{
+    height: 100vh;
+    width: 100vw;
+    }
+    .content .informations{
+        position: absolute;
+        left:35vw; 
+        top: 25vh;
+        font-size: 2rem;
+        height: 20rem;
+        width: 40rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+        }
+}
+@media screen and (max-width:320px){
+    .Bar{
+        z-index: 3;
+    }
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    html,body{
+    height: 100vh;
+    width: 100vw;
+    }
+    .content .informations{
+        position: absolute;
+        left:-50vw; 
+        top: 25vh;
+        font-size: 2rem;
+        height: 20rem;
+        width: 40rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .container{
+        height: 100vh;
+        width: 100vw;
+    }
 }
