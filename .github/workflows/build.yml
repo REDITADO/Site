@@ -16,7 +16,7 @@ jobs:
       - name: Build web-app
         run: |
           npm i
-          yarn start
+          
       - name: Portifolio
         uses: peaceiris/actions-gh-pages@v3
         with:
